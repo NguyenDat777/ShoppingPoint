@@ -1,0 +1,108 @@
+<div class="my-container mx-auto border border-dark">
+    <div class="row g-0">
+           <!-- Profile Image of Product -->
+        <div class="col-4 p-4">
+            <div class="d-flex justify-content-center align-items-center">
+                <img src="../../assets/Images/mobiles/10/{{imageIndex}}.jpg" alt="" class="w-100">
+            </div>
+            <div class="image-thumbnails d-flex justify-content-between align-items-center">
+                <img src="../../assets/Images/mobiles/10/1.jpg" alt="Thumbnail Image" (click)="imageIndex=1">
+                <img src="../../assets/Images/mobiles/10/2.jpg" alt="Thumbnail Image" (click)="imageIndex=2">
+                <img src="../../assets/Images/mobiles/10/3.jpg" alt="Thumbnail Image" (click)="imageIndex=3">
+                <img src="../../assets/Images/mobiles/10/4.jpg" alt="Thumbnail Image" (click)="imageIndex=4">
+                <img src="../../assets/Images/mobiles/10/5.jpg" alt="Thumbnail Image" (click)="imageIndex=5">
+            </div>
+           
+
+        </div>
+           <!-- Details of Product -->
+        <div class="col-8 p-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Header</h2>
+                </div>
+
+                <div class="card-body">
+                    <h1 class="card-title text-success">
+                        Giá khuyến mãi
+                        <span class="text-primary">-20%</span>
+                    </h1>
+                    <h4 class="card-subtitle text-danger text-decoration-line-through">
+                       Giá niêm yết
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-subtitle my-2 text-primary"> sản phẩm có sẵn. </h6>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-outline-success" 
+                                >Thêm vào giỏ
+                           
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-text">Mô tả</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action"
+                            *ngFor="let item of [1,1,1,1,1,1,1,1]">
+                            {{item}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Suggested Products -->
+    <div class="row g-0">
+        <div class="col-12 ps-5 pt-4 pb-3">
+            <h3 class="border border-secondary text-center py-2 my-rounded-corner w-25">Sản phẩm có liên quan</h3>
+        </div>
+
+        <div class="col-12">
+            <app-suggested-products></app-suggested-products>
+        </div>
+    </div>
+    <!-- Review -->
+    <div class="row g-0 my-5">
+        <!-- Users Review -->
+        <div class="col p-3">
+            <h3>Đánh giá của bạn</h3>
+            <h5 class="mt-4">Viết đánh giá của bạn</h5>
+            <textarea class="w-75 p-2" ></textarea>
+            <div class="d-flex align-items-start">
+                <button class="btn btn-outline-secondary mt-4 me-5" type="button" >
+                    Lưu đánh giá
+                </button>
+
+                <div>
+                    <h6 class="text-danger mt-4">Đăng nhập trước, sau đó nhập đánh giá.</h6>
+                    <h6 class="text-danger" >Bài đánh giá không thể để trống!</h6>
+                    <h6 class="text-success">Đánh giá đã lưu thành công!</h6>
+                </div>
+            </div>
+        </div>
+        <!-- Other Review -->
+        <div class="col p-3">
+            <h3>Những đánh giá khác</h3>
+            <h6>Chưa có đánh giá nào!</h6>
+            <div class="card mt-3" *ngFor="let review of [1,2,3]">
+                <div class="card-header d-flex justify-content-between">
+                    <div class="card-text">
+                        Nguyễn
+                        Đạt
+                    </div>
+                    <div class="card-text fst-italic">
+                        Reviewed On: <span class="fw-bold">
+                            {{"22 Jun 2023" | date:"dd-MMM-yyyy"}}
+                        </span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-text">Đánh Giá</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+   
